@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+    <h1>This is my signup page</h1>
+    
+    <form action="{% url 'polls:addUser' %}" method = "post">
+
+        {% csrf_token %}
+
+
+        {{form.as_p}}
+
+        <input type ="submit" value = "Signup" class ="btn btn-success">
+        <input type ="email" id="gmail" >
+
+
+    </form>
+    
+</body>
+</html>
